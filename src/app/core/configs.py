@@ -14,6 +14,8 @@ LAYERS_BTN_MAPPING = {
     "satellite": "satellite",
     "terrain": "terrain",
     "hybrid": "hybrid",
+    "googlesatellite": "googlesatellite",
+    "googlemaps": "googlemaps",
 }
 LAYERS = list(LAYERS_BTN_MAPPING.keys())
 RELOCATE_DIRECTIONS_MAPPING = {"north": 0, "east": 90, "south": 180, "west": 270}
