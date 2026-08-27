@@ -1,0 +1,43 @@
+*.pyc
+
+build/
+installers/
+logs/
+data/
+docs/
+
+# Generated image files (output from tile generation)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+
+# Python cache
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.env
+.local/
+
+# Logs
+*.log
+activity.log
