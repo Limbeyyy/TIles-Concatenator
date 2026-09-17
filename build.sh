@@ -38,6 +38,18 @@ print_step "Checking Python installation..."
 python_version=$(python3 --version 2>&1)
 print_success "Found: $python_version"
 
+# Create virtual environment if it doesn't exist
+if [ ! -d "venv" ]; then
+    print_step "Creating virtual environment..."
+    python3 -m venv venv
+    print_success "Virtual environment created"
+fi
+
+# Activate virtual environment
+print_step "Activating virtual environment..."
+source venv/bin/activate
+print_success "Virtual environment activated"
+
 # Install dependencies
 print_step "Installing dependencies..."
 pip install -q -r requirements.txt
@@ -161,3 +173,6 @@ echo "  Linux:   Double-click the AppImage or run: chmod +x *.AppImage && ./Tile
 echo "  macOS:   Double-click the .app bundle or run: open Tile-Concatenator.app"
 echo "  Windows: Run the installer .exe or double-click the executable"
 echo ""
+
+# Deactivate virtual environment
+deactivate 2>/dev/null || true
