@@ -63,7 +63,7 @@ print_success "Clean complete"
 
 # Build with PyInstaller
 print_step "Building executable with PyInstaller..."
-pyinstaller --distpath "$DIST_DIR" --workpath "$BUILD_DIR" Map-Concatenator.spec --noconfirm
+pyinstaller --workpath "$BUILD_DIR" Map-Concatenator.spec --noconfirm
 print_success "Executable built"
 
 # Get OS type
