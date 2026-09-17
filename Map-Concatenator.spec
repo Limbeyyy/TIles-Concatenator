@@ -36,6 +36,8 @@ a = Analysis(
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
+icon_path = os.path.join('src', 'app', 'media', 'dev_logo.ico') if os.path.exists(os.path.join('src', 'app', 'media', 'dev_logo.ico')) else None
+
 exe = EXE(
     pyz,
     a.scripts,
@@ -50,4 +52,5 @@ exe = EXE(
     upx=False,
     console=False,
     target_arch=None,
+    icon=icon_path,
 )
