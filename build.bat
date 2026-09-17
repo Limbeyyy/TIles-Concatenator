@@ -33,7 +33,7 @@ echo Clean complete
 
 REM Build with PyInstaller
 echo Building executable with PyInstaller...
-pyinstaller --distpath dist --buildpath build Map-Concatenator.spec --noconfirm
+pyinstaller --distpath dist --workpath build Map-Concatenator.spec --noconfirm
 if errorlevel 1 (
     echo Error: PyInstaller build failed
     exit /b 1
