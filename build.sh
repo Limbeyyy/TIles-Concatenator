@@ -58,7 +58,7 @@ print_success "Dependencies installed"
 
 # Clean previous builds
 print_step "Cleaning previous builds..."
-rm -rf "$BUILD_DIR" "$DIST_DIR" build/ dist/ *.spec 2>/dev/null || true
+rm -rf "$BUILD_DIR" "$DIST_DIR" build/ dist/ 2>/dev/null || true
 print_success "Clean complete"
 
 # Build with PyInstaller

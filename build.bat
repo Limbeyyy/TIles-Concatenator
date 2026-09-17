@@ -28,7 +28,6 @@ echo Dependencies installed
 REM Clean previous builds
 echo Cleaning previous builds...
 rmdir /s /q build dist 2>nul || true
-del /q *.spec 2>nul || true
 echo Clean complete
 
 REM Build with PyInstaller
